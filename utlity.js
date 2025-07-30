@@ -36,3 +36,21 @@ function history(amount, name, time) {
     `
     historyBox.appendChild(makeDiv);
 }
+
+
+// route system 
+
+document.getElementById("history-btn").addEventListener("click",()=>{
+    document.getElementById("history-btn").classList.remove("bg-slate-200");
+    document.getElementById("history-btn").classList.add("bg-[#B4F461]");
+    document.getElementById("donate-btn").classList.add("bg-slate-200");
+    document.getElementById("donate-card").classList.add("hidden");
+    document.getElementById("history").classList.remove("hidden");
+})
+document.getElementById("donate-btn").addEventListener("click",()=>{
+     document.getElementById("donate-btn").classList.add("bg-[#B4F461]");
+    document.getElementById("history-btn").classList.add("bg-slate-200");
+    document.getElementById("donate-btn").classList.remove("bg-slate-200");
+    document.getElementById("donate-card").classList.remove("hidden");
+    document.getElementById("history").classList.add("hidden");
+})
